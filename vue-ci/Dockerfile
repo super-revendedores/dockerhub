@@ -1,6 +1,6 @@
 FROM node:12.13.0-alpine
 
-RUN yarn global add @vue/cli @vue/cli-service-global
+RUN yarn global add @vue/cli @vue/cli-service
 
 RUN apk -v --update add python3 && \
     python3 -m ensurepip  && \
