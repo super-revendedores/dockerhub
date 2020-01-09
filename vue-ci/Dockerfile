@@ -1,4 +1,4 @@
-FROM node:12.13.0-alpine
+FROM node:12.14.1-alpine
 
 RUN yarn global add @vue/cli @vue/cli-service @sentry/cli && \
     yarn cache clean --force
