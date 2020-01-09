@@ -1,7 +1,9 @@
 FROM node:12.13.0-alpine
 
-RUN yarn global add @vue/cli @vue/cli-service @sentry/cli
+RUN yarn global add @vue/cli @vue/cli-service @sentry/cli && \
+    yarn cache clean --force
 
-RUN apk -v --update add python3 && \
+RUN apk -v --update add python3 curl && \
     python3 -m ensurepip  && \
-    pip3 install awscli
+    pip3 install awscli && \
+    rm -rf /var/cache/apk/*
