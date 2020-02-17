@@ -1,0 +1,10 @@
+uritemplate
+numpy
+pandas
+psycopg2-binary
+dataclasses-json
+openpyxl
+pillow
+python-resize-image
+requests
+tqdm
