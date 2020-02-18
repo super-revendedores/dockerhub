@@ -1,7 +1,6 @@
 FROM python:3.7.6-slim-buster
 
-RUN apt upgrade && apt install -y libjpeg8-dev zlib1g-dev libtiff-dev libfreetype6 libfreetype6-dev \
-    libwebp-dev libopenjp2-7-dev libopenjp2-7-dev  && \
+RUN apt upgrade && apt install -y curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
