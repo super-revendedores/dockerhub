@@ -1,8 +1,9 @@
-FROM python:3.7.6-alpine3.11
+FROM python:3.7.6-slim-buster
 
-RUN apk upgrade && apk add --no-cache --virtual build-dependencies linux-headers make gcc g++ jq curl \
-    postgresql-dev mariadb-dev unixodbc-dev ca-certificates zlib-dev jpeg-dev tiff-dev freetype-dev libc-dev lcms2-dev libwebp-dev \
-    tcl-dev tk-dev libxml2-dev libxslt-dev && rm -rf /var/cache/apk/*
+RUN apt upgrade && apt install -y libjpeg8-dev zlib1g-dev libtiff-dev libfreetype6 libfreetype6-dev \
+    libwebp-dev libopenjp2-7-dev libopenjp2-7-dev  && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD requirements.txt /var/projeto/requirements.txt
 
