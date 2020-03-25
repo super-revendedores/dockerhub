@@ -1,0 +1,108 @@
+source 'https://rubygems.org'
+ruby '2.2.4'
+
+gem 'base32'
+gem 'bootstrap-sass'
+gem 'bourbon'
+gem 'coffee-rails'
+gem 'cpf_cnpj'
+gem 'date_time_attribute'
+gem 'delayed_job_active_record'
+gem 'devise'
+gem 'dotenv-rails'
+# gem 'factory_bot_rails'
+gem 'factory_girl_rails'
+gem 'faker'
+gem 'fcm'
+gem 'fog'
+gem 'font-awesome-rails'
+gem 'formtastic'
+gem 'friendly_id'
+gem 'gretel'
+gem 'jbuilder'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'metamagic'
+gem 'paperclip'
+gem 'paperclip-compression'
+gem 'paranoia'
+gem 'pg'
+gem 'pg_search'
+gem 'postmark-rails'
+gem 'puma'
+gem 'rails', '~> 4.2.7'
+gem 'remotipart'
+gem 'rest-client'
+gem 'roo'
+gem 'rubyzip'
+gem 'sass-rails'
+gem 'sdoc', group: :doc
+gem 'select2-rails'
+gem 'slack-notifier'
+gem 'slim-rails'
+gem 'squeel'
+gem 'tinymce-rails'
+gem 'uglifier'
+
+gem 'acts_as_list'
+gem 'cancancan'
+gem 'gibbon'
+gem 'httparty'
+gem 'iconv'
+gem 'jcrop-rails-v2'
+gem 'rdstation-ruby-client'
+
+gem 'aws-sdk-s3', '~> 1'
+gem 'flag_shih_tzu'
+gem 'google-api-client', '~> 0.32.1'
+gem 'groupdate'
+
+gem 'airbrake', '~> 9.1'
+gem 'rubocop', '~> 0.52.1', require: false
+
+gem 'faraday', '~> 0.9.2'
+gem 'rack-cors', require: 'rack/cors'
+gem 'sentry-raven'
+
+group :development, :test do
+  gem 'awesome_print'
+  gem 'byebug'
+  gem 'colorize'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'spring'
+  gem 'debase'
+  gem 'ruby-debug-ide'
+end
+
+group :development do
+  gem 'active_record_query_trace'
+  gem 'annotate'
+  gem 'better_errors'
+  gem 'bullet', '~> 5.5'
+  gem 'pry-byebug'
+  gem 'rack-mini-profiler', '~> 0.10.2'
+  gem 'railroady'
+  gem 'web-console', '~> 2.0'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'shoulda-callback-matchers'
+  gem 'shoulda-matchers'
+  gem 'simplecov', :require => false
+  gem 'timecop'
+  gem 'vcr'
+  gem 'webmock'
+end
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
+
+group :production do
+  # Add-ons Heroku
+
+  # app Monitoring
+  gem 'newrelic_rpm'
+end
