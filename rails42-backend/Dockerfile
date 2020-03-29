@@ -5,7 +5,6 @@ RUN apt-get update -yqq \
     postgresql-client \
     nodejs \
     imagemagick \
-    librmagick-ruby \
     ghostscript \
  && apt-get -q clean \
  && rm -rf /var/lib/apt/lists
